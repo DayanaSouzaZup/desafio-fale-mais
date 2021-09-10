@@ -5,9 +5,7 @@ public enum CodigoCidade {
     SAO_PAULO(11),
     RIBERIRAO_PRETO(16),
     SAO_JOSE_RIO_PRETO(17),
-    CAMPINAS(19),
-    UBERLANDIA(34),
-    BELO_HORIZONTE(31);
+    PRESIDENTE_PRUDENTE(18);
 
     private int codigoDDD;
 

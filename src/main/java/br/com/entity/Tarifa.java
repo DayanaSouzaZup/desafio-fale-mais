@@ -16,8 +16,8 @@ public class Tarifa {
     @Column(name = "destino", nullable = false)
     private String destino;
 
-    @Column(name = "valor", nullable = false)
-    private String valor;
+    @Column(name = "tempo", nullable = false)
+    private int tempo;
 
     public Long getIdTarifa() {
         return idTarifa;
@@ -43,12 +43,12 @@ public class Tarifa {
         this.destino = destino;
     }
 
-    public String getValor() {
-        return valor;
+    public int getTempo() {
+        return tempo;
     }
 
-    public void setValor(String valor) {
-        this.valor = valor;
+    public void setValor(int valor) {
+        this.tempo = tempo;
     }
 
 }
