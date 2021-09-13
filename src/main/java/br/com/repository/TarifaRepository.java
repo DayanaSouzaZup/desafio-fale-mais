@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TarifaRepository extends CrudRepository<Tarifa, Long>{
 
+    public Tarifa findByOrigemAndDestino(Integer origem, Integer destino);
+
 }

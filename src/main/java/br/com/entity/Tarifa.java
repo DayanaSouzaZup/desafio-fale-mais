@@ -11,13 +11,19 @@ public class Tarifa {
     private Long idTarifa;
 
     @Column(name = "origem", nullable = false)
-    private String origem;
+    private Integer origem;
 
     @Column(name = "destino", nullable = false)
-    private String destino;
+    private Integer destino;
 
-    @Column(name = "tempo", nullable = false)
-    private int tempo;
+    @Column(name = "valor_por_minuto", nullable = false)
+    private Double valorPorMinuto;
+
+    public Tarifa(Integer origem, Integer destino, Double valorPorMinuto) {
+        this.origem = origem;
+        this.destino = destino;
+        this.valorPorMinuto = valorPorMinuto;
+    }
 
     public Long getIdTarifa() {
         return idTarifa;
@@ -27,28 +33,31 @@ public class Tarifa {
         this.idTarifa = idTarifa;
     }
 
-    public String getOrigem() {
+    public Integer getOrigem() {
         return origem;
     }
 
-    public void setOrigem(String origem) {
+    public void setOrigem(Integer origem) {
         this.origem = origem;
     }
 
-    public String getDestino() {
+    public Integer getDestino() {
         return destino;
     }
 
-    public void setDestino(String destino) {
+    public void setDestino(Integer destino) {
         this.destino = destino;
     }
 
-    public int getTempo() {
-        return tempo;
+    public Double getValorPorMinuto() {
+        return valorPorMinuto;
     }
 
-    public void setValor(int valor) {
-        this.tempo = tempo;
+    public void setValorPorMinuto(Double valorPorMinuto) {
+        this.valorPorMinuto = valorPorMinuto;
     }
 
+    public TarifaDTO toDTO(){
+        return new TarifaDTO(origem, destino, valorPorMinuto);
+    }
 }
